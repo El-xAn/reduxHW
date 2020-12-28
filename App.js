@@ -8,8 +8,9 @@ class App extends Component {
   render() {
     return (
       <>
-      <ScrollView style={ styles.container}>
-        <Header />
+      <Header style={styles.searchBar} />
+      
+      <ScrollView style={styles.listStyle}>
         <List />
       </ScrollView>    
     </>

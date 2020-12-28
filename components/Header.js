@@ -13,15 +13,16 @@ class Header extends Component {
   
     render() {
       return (
-        <View style={styles.container}>
+        <View>
           <View style={styles.headerContainer}>
             <Text style={styles.headerText}>Welcome</Text>
           </View>
           <View style={styles.searchBar}>
             <TextInput style={styles.input} onChangeText={text => this.changedName = text}></TextInput>
             <TextInput style={styles.input} onChangeText={text => this.changedNumber = text}></TextInput>
-           <TouchableOpacity style={styles.searchButton} onPress={() => this.props.addInfo(this.changedName, this.changedNumber)}>
-              <Text style={styles.text}>SEARCH</Text>
+            
+            <TouchableOpacity style={styles.searchButton} onPress={() => this.props.addInfo(this.changedName, this.changedNumber)}>
+              <Text style={styles.text}>ADD</Text>
             </TouchableOpacity>
           </View>
         </View>

@@ -6,7 +6,7 @@ export const styles = StyleSheet.create ({
       backgroundColor: 'gray'
     },
     headerContainer: {
-      height: 100,
+      height: 80,
       backgroundColor: "black",
       justifyContent: "center",
       alignItems: "center"
@@ -17,18 +17,21 @@ export const styles = StyleSheet.create ({
     },
     input: {
       flex: 1,
-      backgroundColor: "white",
+      fontSize: 20,
+      backgroundColor: 'gray',
       borderRadius: 10,
       borderStartColor: "blue",
-      fontSize: 20,
       margin: 2
     },
     searchBar: {
+      marginTop:10,
+      height: 160,
       flexDirection: "column",
       margin: 2,
 
     },
-    searchButton: {
+    searchButton: {  
+      flex: 1,
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "blue",
@@ -37,15 +40,17 @@ export const styles = StyleSheet.create ({
     },
     text: {
       color: "white",
-      fontSize: 20,
+      fontSize: 30,
     },  
     listStyle: {
       flex: 1,
       backgroundColor: '#fff'
     },
     listText: {
+      flex: 1,
+      margin: 5,
       color: "#000",
-      fontSize: 20,  
+      fontSize: 25,  
     }
 })
 

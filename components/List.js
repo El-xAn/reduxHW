@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { View, TextInput, Text, TouchableOpacity} from 'react-native'
+import { View, Text, } from 'react-native'
 import {styles} from '../styles/Styles'
 import { connect } from 'react-redux'
 
@@ -12,7 +12,13 @@ class List extends Component {
     render() {
       return (
         <View style={styles.listStyle}>
-          <Text style={styles.listText}>{this.props.name1}{this.props.number1}</Text>
+          {this.props.list.map( (item, index) => { console.log(item.name, item.number);
+            
+            return <View key={index}>
+              <Text style={styles.listText}>Name: {item.name} Number: {item.number}</Text>
+            </View>
+          })}
+          
         </View>
       );
     }
@@ -20,8 +26,7 @@ class List extends Component {
 
  const mapStateToProps = state => {
    return {
-    name1: state.name,
-    number1: state.number
+    list: state.list
    }
   }
  
